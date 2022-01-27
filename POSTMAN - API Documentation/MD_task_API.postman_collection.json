@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "6cf96a49-b35c-4886-8d66-9b49c0d80de7",
+		"name": "MD_task_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "date_of_joining",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "profilePicture",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "This API is used for register new user."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "This API is used for Login with validate User credentials"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/destroy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/destroy",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"destroy"
+					]
+				},
+				"description": "This API is used for destroy session."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "designation",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date_of_joining",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birthDate",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "profilePicture",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "role",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"edit"
+					]
+				},
+				"description": "This API is used for Update current user Info.\r\nThis only happen when used was login already"
+			},
+			"response": []
+		}
+	]
+}
