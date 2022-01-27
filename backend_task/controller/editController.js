@@ -9,12 +9,17 @@ module.exports = {
           $set: {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
+            phoneNumber: req.body.phoneNumber,
+            designation: req.body.designation,
+            date_of_joining: req.body.date_of_joining,
+            birthDate: req.body.birthDate,
+            profilePicture: req.body.profilePicture,
+            role: req.body.role,
           },
         },
         (err, user) => {
           if (err) throw err;
-          console.log(user);
-          res.send("Data Updated");
+          res.send("User Info Updated");
         }
       );
     } else {
