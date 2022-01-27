@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt");
 const User = require("../models/userDB");
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
-      password: req.body.password,
+      password: bcrypt.hashSync(req.body.password, 10),
       phoneNumber: req.body.phoneNumber,
       designation: req.body.designation,
       date_of_joining: req.body.date_of_joining,
