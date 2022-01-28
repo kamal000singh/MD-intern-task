@@ -22,11 +22,15 @@ const registerRouter = require("./routers/register");
 const loginRouter = require("./routers/login");
 const editRouter = require("./routers/edit");
 const destroyRouter = require("./routers/destroy");
+const changePassRouter = require("./routers/changePass");
+const verifyRouter = require("./routers/verify");
 
 app.use("/", registerRouter);
 app.use("/", loginRouter);
 app.use("/", editRouter);
 app.use("/", destroyRouter);
+app.use("/", changePassRouter);
+app.use("/", verifyRouter);
 
 app.listen(port, () => {
   console.log("listen on port " + port);

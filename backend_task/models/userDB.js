@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-
-mongoose.connect(
-  "mongodb+srv://MDtask:" +
-    process.env.MONGODB_PASSWORD +
-    "@cluster0.z7ney.mongodb.net/MD_task?retryWrites=true&w=majority"
-);
+const connect = require("../db/db");
 
 const userSchema = mongoose.Schema({
   emp_id: String,
