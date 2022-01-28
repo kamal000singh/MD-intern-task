@@ -20,7 +20,6 @@ module.exports = {
         } else {
           res.send("OTP not Match");
         }
-        // res.send(found);
       });
     } else {
       res.send("session expired");

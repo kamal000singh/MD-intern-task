@@ -11,7 +11,7 @@ module.exports = {
   post: (req, res) => {
     session = req.session;
     if (session.userId) {
-      let otp = parseInt(Math.random() * 10000, 10);
+      let otp = parseInt(Math.random() * 1000000);
       let sendOTP = {
         from: process.env.USER_ID,
         to: req.body.email,
@@ -27,7 +27,7 @@ module.exports = {
           transporter.sendMail(sendOTP, (err, message) => {
             let user = new otpuser({
               objectId: session.userId,
-              password: bcrypt.hashSync(req.body.password, 10),
+              password: bcrypt.hashSync(req.body.newPassword, 10),
               otp: otp,
             });
             user.save((err, result) => {
