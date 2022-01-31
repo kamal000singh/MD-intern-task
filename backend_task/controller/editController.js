@@ -1,5 +1,10 @@
 const User = require("../models/userDB");
+const multer = require("multer");
+
+const upload = multer({}).none();
+
 module.exports = {
+  upload: upload,
   post: (req, res) => {
     session = req.session;
     if (session.userId) {

@@ -1,13 +1,17 @@
 const otpuser = require("../models/otpsender");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
+const multer = require("multer");
 require("dotenv").config();
+
+const upload = multer({}).none();
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: { user: process.env.USER_ID, pass: process.env.USER_PASSWORD },
 });
 module.exports = {
+  upload: upload,
   post: (req, res) => {
     session = req.session;
     if (session.userId) {
