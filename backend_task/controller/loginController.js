@@ -2,10 +2,8 @@ const User = require("../models/userDB");
 const bcrypt = require("bcrypt");
 const multer = require("multer");
 
-const upload = multer({}).none();
-
 module.exports = {
-  upload: upload,
+  upload: multer({}).none(),
   post: (req, res) => {
     User.findOne({ email: req.body.email }, (err, found) => {
       if (err) throw err;

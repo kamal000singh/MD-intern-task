@@ -2,10 +2,8 @@ const User = require("../models/userDB");
 const otpuser = require("../models/otpsender");
 const multer = require("multer");
 
-const upload = multer({}).none();
-
 module.exports = {
-  upload: upload,
+  upload: multer({}).none(),
   post: (req, res) => {
     session = req.session;
     if (session.userId) {
